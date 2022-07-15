@@ -25,4 +25,8 @@ app.get("/error", function (req, res) {
 app.get("/signin", function (req, res) {
   res.send("<h1>Signin</h1>");
 });
-app.listen(3001);
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, () => {
+  console.log(`서버가 ${PORT}번에서 작동중입니다.`);
+});
